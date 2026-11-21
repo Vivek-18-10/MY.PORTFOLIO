@@ -1,175 +1,262 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+    background-color: #f5f7fa;
+    color: #263445;
+    line-height: 1.7;
 }
 
 header {
-    background-color: #222;
+    background: linear-gradient(120deg, #101d35, #193b52);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px 15px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header h1 {
+    font-size: 30px;
+    letter-spacing: 1px;
 }
 
 nav {
-    margin-top: 10px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 nav a {
-    color: white;
+    color: #e5f4f5;
     text-decoration: none;
-    padding: 8px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    transition: 0.3s;
 }
 
 nav a:hover {
-    background-color: #555;
-    border-radius: 5px;
+    background-color: #20a6a6;
+    color: white;
 }
 
 main {
     position: static;
     width: 85%;
+    max-width: 1200px;
     margin: auto;
 }
 
 section {
-    padding: 30px 0;
+    padding: 45px 0;
 }
 
 h2 {
-    color: #222;
-    margin-bottom: 15px;
+    color: #142d46;
+    font-size: 27px;
+    margin-bottom: 20px;
 }
 
 hr {
-    border: 1px solid #ccc;
+    border: none;
+    height: 1px;
+    background-color: #dce3e9;
 }
 
 #home {
     position: relative;
     text-align: center;
-    background-color: #ddd;
-    padding: 50px 20px;
+    padding: 90px 20px;
+    margin-top: 25px;
+    border-radius: 15px;
+    background: linear-gradient(120deg, #d9f0ef, #e6edf8);
+}
+
+#home h2 {
+    font-size: 36px;
+    color: #142d46;
+}
+
+#home p {
+    font-size: 18px;
+    margin: 15px 0;
 }
 
 #home a {
     display: inline-block;
     margin-top: 15px;
-    background-color: #222;
+    padding: 12px 25px;
+    background-color: #168b8b;
     color: white;
-    padding: 10px 20px;
     text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+#home a:hover {
+    background-color: #106b70;
+    transform: translateY(-3px);
 }
 
 #about img {
-    border: 3px solid #222;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
     border-radius: 50%;
-    box-shadow: 2px 2px 8px gray;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px #aabac8;
     margin: 15px 0;
+}
+
+#about p {
+    font-size: 17px;
 }
 
 .project-card {
     position: relative;
     background-color: white;
-    padding: 20px;
-    margin: 15px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    border: 1px solid #e1e8ee;
+    box-shadow: 0 4px 15px rgba(25, 50, 70, 0.07);
+    transition: 0.3s;
+}
+
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #20a6a6;
+    border-radius: 12px 0 0 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(25, 50, 70, 0.13);
 }
 
 .project-card h3 {
-    color: #444;
+    color: #167c82;
+    margin-bottom: 8px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(25, 50, 70, 0.06);
 }
 
 th, td {
-    border: 1px solid #ccc;
-    padding: 12px;
+    padding: 15px;
     text-align: left;
+    border: 1px solid #e1e8ee;
 }
 
 th {
-    background-color: #222;
+    background-color: #193b52;
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #eee;
+    background-color: #edf5f6;
 }
 
 tr:hover {
-    background-color: #ddd;
+    background-color: #dcefee;
 }
 
 form {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(25, 50, 70, 0.07);
+}
+
+label {
+    font-weight: bold;
+    color: #193b52;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #aaa;
-    border-radius: 5px;
+    padding: 13px;
+    margin-top: 7px;
+    border: 1px solid #cbd5df;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
 }
 
 input:focus, textarea:focus {
-    border: 2px solid #222;
     outline: none;
+    border: 2px solid #20a6a6;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
 }
 
 button {
-    background-color: #222;
+    background-color: #168b8b;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
+    border-radius: 7px;
     cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #106b70;
 }
 
 .top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #222;
+    background-color: #193b52;
     color: white;
-    padding: 10px;
+    padding: 12px 16px;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top:hover {
+    background-color: #168b8b;
 }
 
 footer {
-    background-color: #222;
-    color: white;
+    background-color: #101d35;
+    color: #e5f4f5;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    padding: 25px;
+    margin-top: 30px;
 }
 
 @media screen and (max-width: 768px) {
     main {
-        width: 95%;
+        width: 92%;
     }
 
     nav {
@@ -177,20 +264,38 @@ footer {
     }
 
     #home {
-        padding: 30px 10px;
+        padding: 55px 15px;
+    }
+
+    #home h2 {
+        font-size: 27px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column;
+    header h1 {
+        font-size: 24px;
     }
 
-    table {
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 6px;
         font-size: 14px;
     }
 
     section {
-        padding: 20px 0;
+        padding: 30px 0;
+    }
+
+    th, td {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
     }
 }
