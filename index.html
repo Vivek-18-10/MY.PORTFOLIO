@@ -1,187 +1,137 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
-    <!-- Navigation -->
     <header>
-        <nav>
-            <h2>Vivek<span>.</span></h2>
+        <h1>Vivek's Portfolio</h1>
 
-            <div class="links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#skills">Skills</a>
-                <a href="#contact">Contact</a>
-            </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
+    <main>
+        
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello! I am Vivek, a Computer Science student.</p>
+            <a href="#about">Know More</a>
+        </section>
 
-        <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
-
-        <h1>
-            Hi, I'm Vivek!
-            <span>Computer Science Student</span>
-        </h1>
-
-        <p class="intro">
-            Learning Web Development, Python and Cybersecurity.
-            I enjoy exploring technology and creating new things.
-        </p>
-
-        <a href="#projects" class="btn">View My Projects</a>
-
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section">
-
-        <h2>About Me</h2>
         <hr>
 
-        <div class="about-content">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
 
-            <img src="images/profile.jpg" alt="My Profile Photo">
+            <img src="images/profile.jpg" alt="My Profile Photo" width="150">
 
-            <div>
-                <h3>Hello! Welcome to my website.</h3>
+            <p>
+                My name is Vivek. I am studying B.Tech in Computer Science.
+                I am interested in web development and cybersecurity.
+            </p>
+        </section>
 
-                <p>
-                    My name is Vivek. I am a B.Tech student
-                    interested in web development, programming
-                    and cybersecurity.
-                </p>
-
-                <p>
-                    I enjoy learning new technologies and
-                    building projects. My goal is to improve
-                    my technical skills and become a software
-                    engineer.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-
-        <h2>My Projects</h2>
         <hr>
 
-        <div class="projects">
+        <section id="projects">
+            <h2>My Projects</h2>
 
             <div class="project-card">
-                <h3>Personal Portfolio</h3>
-                <p>
-                    A website to showcase my introduction,
-                    skills and projects.
-                </p>
-                <span>HTML and CSS</span>
+                <h3>Portfolio Website</h3>
+                <p>A personal website made using HTML and CSS.</p>
             </div>
 
             <div class="project-card">
-                <h3>Python Calculator</h3>
-                <p>
-                    A beginner project that performs
-                    basic mathematical calculations.
-                </p>
-                <span>Python</span>
+                <h3>Calculator</h3>
+                <p>A simple calculator project using programming.</p>
             </div>
 
             <div class="project-card">
-                <h3>Cybersecurity Learning</h3>
-                <p>
-                    Learning about computer security,
-                    networks and online safety.
-                </p>
-                <span>Cybersecurity</span>
+                <h3>Web Design</h3>
+                <p>A basic webpage design project.</p>
             </div>
+        </section>
 
-        </div>
-    </section>
+        <hr>
+        
+        <section id="skills">
+            <h2>My Skills</h2>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
+            <table border="1">
+                <tr>
+                    <th>Skill</th>
+                    <th>Level</th>
+                </tr>
 
-        <h2>My Skills</h2>
+                <tr>
+                    <td>HTML</td>
+                    <td>Beginner</td>
+                </tr>
+
+                <tr>
+                    <td>CSS</td>
+                    <td>Beginner</td>
+                </tr>
+
+                <tr>
+                    <td>Python</td>
+                    <td>Beginner</td>
+                </tr>
+
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Beginner</td>
+                </tr>
+            </table>
+        </section>
+
         <hr>
 
-        <table>
-            <tr>
-                <th>Skill</th>
-                <th>Level</th>
-            </tr>
+        <section id="contact">
+            <h2>Contact Me</h2>
 
-            <tr>
-                <td>HTML</td>
-                <td>Beginner</td>
-            </tr>
+            <form action="#" method="post">
 
-            <tr>
-                <td>CSS</td>
-                <td>Beginner</td>
-            </tr>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your name" required>
 
-            <tr>
-                <td>Python</td>
-                <td>Beginner</td>
-            </tr>
+                <br><br>
 
-            <tr>
-                <td>Computer Basics</td>
-                <td>Basic</td>
-            </tr>
-        </table>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
 
-    </section>
+                <br><br>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"
+                          placeholder="Write your message" required></textarea>
 
-        <h2>Contact Me</h2>
-        <hr>
+                <br><br>
 
-        <form>
+                <button type="submit">Send Message</button>
 
-            <label for="name">Your Name</label>
-            <input type="text" id="name"
-            placeholder="Enter your name" required>
+            </form>
+        </section>
 
-            <label for="email">Your Email</label>
-            <input type="email" id="email"
-            placeholder="Enter your email" required>
+    </main>
 
-            <label for="message">Your Message</label>
-            <textarea id="message"
-            placeholder="Write your message"
-            required></textarea>
+    <p><a href="#top" class="top">Back to Top</a></p>
 
-            <button type="submit">Send Message</button>
-
-        </form>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>© 2026 Vivek | My Personal Portfolio</p>
-        <p>Made with HTML and CSS</p>
+        <p>&copy; 2026 Vivek. All Rights Reserved.</p>
     </footer>
-
-    <!-- Back to Top -->
-    <a href="#home" class="top">↑</a>
 
 </body>
 </html>
